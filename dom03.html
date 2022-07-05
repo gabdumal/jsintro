@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM03</title>
+  </head>
+  <body>
+    <h1>Me mude com JS!</h1>
+    <div>A: <span>3</span></div>
+    <div>B: <span>3</span></div>
+    <div>A+B: <span>?</span></div>
+    <script>
+      console.log("Hello, World!");
+
+      //Busca uma referência para o 1º elemento
+      const eH1 = document.querySelector("h1");
+      const eSpans = document.querySelectorAll("span");
+
+      const eA = eSpans[0];
+      const eB = eSpans[1];
+      const eC = eSpans[2];
+
+      const a = Number(eA.textContent);
+      const b = Number(eB.textContent);
+      const c = a + b;
+
+      eC.textContent = c;
+
+      // Escreve na saída
+      eH1.textContent = "DOM03";
+    </script>
+  </body>
+</html>
