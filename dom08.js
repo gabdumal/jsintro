@@ -10,20 +10,16 @@ const evenList = lists[0];
 const oddList = lists[1];
 
 // Adiciona ouvintes
-evenButton.addEventListener("click", handleClickEven);
-oddButton.addEventListener("click", handleClickOdd);
-
-// Gerenciadores
-function handleClickEven() {
+evenButton.addEventListener("click", function (event) {
   const dispNumVal = dispNum.textContent;
   insertListItem(evenList, dispNumVal);
   updateDisplayedNumber();
-}
-function handleClickOdd() {
+});
+oddButton.addEventListener("click", function (event) {
   const dispNumVal = dispNum.textContent;
   insertListItem(oddList, dispNumVal);
   updateDisplayedNumber();
-}
+});
 
 // Operações
 function insertListItem(list, value) {
